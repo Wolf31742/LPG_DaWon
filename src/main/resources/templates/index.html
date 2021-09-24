@@ -22,6 +22,14 @@
 			</div>
 		</button>
 	</header>
+	<th:block>
+		<tr th:each="sql:${tests}">
+			<td th:text="${sql.id}"></td>&nbsp
+			<td th:text="${sql.pw}"></td>&nbsp
+			<td th:text="${sql.nick}"></td>&nbsp
+			<td th:text="${sql.email}"></td><hr>
+		</tr>
+	</th:block>
 	<div class="container">
 		<input type="hidden">
 		<!-- #5693 브랜드 스토리 더보기 아이콘 추가 및 순서 변경 -->

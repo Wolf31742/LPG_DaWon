@@ -1,7 +1,9 @@
 package com.smart.project.proc;
 
 import com.smart.project.annotation.Master;
+import com.smart.project.common.vo.MemberVO;
 import com.smart.project.common.vo.MenuVO;
+import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectProvider;
 import org.springframework.stereotype.Component;
 
@@ -17,4 +19,7 @@ public interface Test {
 	 * @변경이력 :
 	 **********************************************************************************************/
 	List<MenuVO> sqlMenu2(int memNo);
+
+	@Select("select * from member")
+	List<MemberVO> sqlMember();
 }
