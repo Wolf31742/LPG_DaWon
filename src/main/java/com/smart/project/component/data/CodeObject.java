@@ -25,5 +25,6 @@ public class CodeObject implements Serializable {
 			return code == null ? "" : code;
 		}
 		private String auth ="";
+		private boolean checked = false;
 	}
 }
